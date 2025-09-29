@@ -1,86 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .apidivs {
+      display: flex;
+      flex-wrap: wrap; /* Optional: wrap to next line if not enough space */
+      justify-content: center; /* Center items horizontally */
+      gap: 10px; /* Add spacing between cards */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .apidivs .card {
+      width: 150px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+      background: #fff;
+    }
+
+    .apidivs .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .apidivs .card h1 {
+      font-size: 14px;
+      margin: 10px 0 5px;
+    }
+
+    .apidivs .card .title {
+      color: #666;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .apidivs .card button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .apidivs .card button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <section>
-<div class="search-input">
-    <form id="form">
+  <section>
+    <div class="search-input">
+      <form id="form">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button>Search</button>
+      </form>
+    </div>
 
-<input type="text"
-       id="searchInput"
-       placeholder="Search..."
-       autocomplete="off"
-       spellcheck="false"
-       />
+    <div class="apidivs">
+      <!-- API data will be displayed here -->
+    </div>
+  </section>
 
-       <button> Search</button>
-
-    </form>
-
-</div>
-
-<div class="apidivs">
-//api data will be displayed here
-<style>
-    .apidivs {
-  text-align: center;
-  padding: 20px;
-}
-
-.apidivs .card {
-  width: 150px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-size: 12px;
-  display: inline-block;
-  vertical-align: top;
-  background: #fff;
-}
-
-.apidivs .card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-.apidivs .card h1 {
-  font-size: 14px;
-  margin: 10px 0 5px;
-}
-
-.apidivs .card .title {
-  color: #666;
-  font-size: 12px;
-  margin-bottom: 8px;
-}
-
-.apidivs .card button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.apidivs .card button:hover {
-  background-color: #0056b3;
-}
-
-</style>
-
-</div>
-    </section>
-
-
-
-    <script  src="./bundle.js"></script>
+  <script src="./bundle.js"></script>
 </body>
 </html>
